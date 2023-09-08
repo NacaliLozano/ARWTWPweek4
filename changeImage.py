@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+"""This funtion iterates through all the images in a direxctory, and modifies the format, size and extention"""
 import os
 from PIL import Image
 dir_path = "~/supplier-data/images"
