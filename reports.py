@@ -1,3 +1,4 @@
+"""This script generates a report PDF file with the parameters attachment_path, title and paragraph"""
 #!/usr/bin/env python3
 from reportlab.lib.styles import getSampleStyleSheet
 from datetime import date
