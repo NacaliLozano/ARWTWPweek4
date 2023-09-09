@@ -13,11 +13,12 @@ def generate_email(sender, recipient, subject, body, attachment_path):
     message.set_content(body)
     mime_type, _ = mimetypes.guess_type(attachment_path)
     mime_type, mime_subtype = mime_type.split('/', 1)
-    with open(attachment_path, 'rb') as ap:
-        message.add_attachment(ap.read(),
-                               maintype=mime_type,
-                               subtype=mime_subtype,
-                               filename=os.path.basename(attachment_path))
+    if attachment_path != "":
+        with open(attachment_path, 'rb') as ap:
+            message.add_attachment(ap.read(),
+                                   maintype=mime_type,
+                                   subtype=mime_subtype,
+                                   filename=os.path.basename(attachment_path))
     print(message)
     return message
 
