@@ -3,7 +3,7 @@
 import requests
 import os
 url = "http://localhost/upload/"
-dir_path = "~/supplier-data/images"
+dir_path = "./supplier-data/images"
 os.chdir(dir_path)
 for item in os.listdir():
     if item.endswith(".jpeg"):
