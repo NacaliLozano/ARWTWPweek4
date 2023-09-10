@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""This script iterates through all the images in a direxctory, and modifies the format, size and extention."""
+"""This script iterates through all the images in a direxctory and modifies the format, size and extension."""
 import os
 from PIL import Image
 dir_path = "~/supplier-data/images"

@@ -7,7 +7,7 @@ from datetime import date
 import os
 
 def generate_report(attachment_path, title, paragraph):
-    """Generates a PDF in the attachment_path"""
+    """Generates a PDF in the attachment_path."""
     styles = getSampleStyleSheet()
     report_title = Paragraph(title, styles["h1"])
     report_body = Paragraph(paragraph, styles["Normal"])
@@ -15,7 +15,7 @@ def generate_report(attachment_path, title, paragraph):
     report.build([report_title, report_body])
 
 if __name__ == "__main__":
-    """Pre-processes the data in order to call generate_report"""
+    """Pre-processes the data in order to call generate_report."""
     styles = getSampleStyleSheet()
     title = "Processed Update on " + date.today().strftime("%B %d, %Y")
     os.chdir("/supplier-data/descriptions")
@@ -28,4 +28,5 @@ if __name__ == "__main__":
                 paragraph.append("weight: " + str(lines[1]).strip() + "<br/><br/>")
         except OSError:
             print("Error opening {}.".format(file))
+    #Call the method
     generate_report("/tmp/processed.pdf", title, paragraph)
