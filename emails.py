@@ -5,7 +5,7 @@ import mimetypes
 import smtplib
 
 def generate_email(sender, recipient, subject, body, attachment_path):
-    """Returns an email message configured with the input parameters"""
+    """Returns an email message configured with the input parameters."""
     message = EmailMessage()
     message['From'] = sender
     message['To'] = recipient
@@ -23,7 +23,7 @@ def generate_email(sender, recipient, subject, body, attachment_path):
     return message
 
 def send_email(message):
-    """Sends the message to the configured SMTP server"""
+    """Sends the message to the configured SMTP server."""
     mail_server = smtplib.SMTP("localhost")
     mail_server.send_message(message)
     mail_server.quit()

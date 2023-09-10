@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""This script will check for the health of the system every 60 seconds and send an automated email if the condition is bad"""
+"""This script will check for the health of the system every 60 seconds and send an automated email if the condition is bad."""
 import shutil, psutil, time, socket, emails
 
 username = "<USERNAME>@example.com"

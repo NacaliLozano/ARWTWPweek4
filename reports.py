@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""This script generates a report PDF file with the parameters attachment_path, title and paragraph"""
+"""This script generates a report PDF file with the parameters attachment_path, title and paragraph."""
 from reportlab.lib.styles import getSampleStyleSheet
 from reportlab.platypus import SimpleDocTemplate
 from reportlab.platypus import Paragraph

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""From here we will call generate_email and send_email functions"""
+"""From here we will call generate_email and send_email methods in order to send the email."""
 import emails
 if __name__ == "__main__":
     email = generate_email("automation@example.com", 

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""This function uploads all the files with the .jpeg extention in a given directory to a given URL"""
+"""This script uploads all the files with the .jpeg extention in a given directory to a given URL."""
 import requests
 import os
 url = "http://localhost/upload/"
