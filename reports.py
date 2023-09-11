@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """This script generates a report PDF file with the parameters attachment_path, title and paragraph."""
+$
 from reportlab.lib.styles import getSampleStyleSheet
 from reportlab.platypus import SimpleDocTemplate
 from reportlab.platypus import Paragraph
@@ -18,15 +19,16 @@ if __name__ == "__main__":
     """Pre-processes the data in order to call generate_report."""
     styles = getSampleStyleSheet()
     title = "Processed Update on " + date.today().strftime("%B %d, %Y")
-    os.chdir("/supplier-data/descriptions")
+    os.chdir("./supplier-data/descriptions")
     paragraph = "<br/>"
     for file in os.listdir():
         try:
             with open(file) as f:
                 lines = f.readlines()
-                paragraph.append("name: " + str(lines[0]).strip() + "<br/>")
-                paragraph.append("weight: " + str(lines[1]).strip() + "<br/><br/>")
+                paragraph += "name: " + lines[0].strip() + "<br/>"
+                paragraph += "weight: " + lines[1].strip() + "<br/><br/>"
         except OSError:
             print("Error opening {}.".format(file))
+    print(paragraph)
     #Call the method
     generate_report("/tmp/processed.pdf", title, paragraph)

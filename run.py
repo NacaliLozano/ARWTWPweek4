@@ -17,6 +17,5 @@ for file in os.listdir():
             #Post the dictionary
             response = requests.post("http://34.16.169.122/fruits/", data=dictionary)
             print(response.status_code)
-            print(response.request.body)
     except OSError:
         print("Error opening {}.".format(file))

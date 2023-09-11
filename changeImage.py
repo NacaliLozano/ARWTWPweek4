@@ -2,7 +2,7 @@
 """This script iterates through all the images in a direxctory and modifies the format, size and extension."""
 import os
 from PIL import Image
-dir_path = "/home/student-04-901f248b5a86/supplier-data/images"
+dir_path = "./supplier-data/images"
 os.chdir(dir_path)
 for item in os.listdir():
     if item.endswith(".tiff"):
